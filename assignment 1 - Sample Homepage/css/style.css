@@ -158,6 +158,33 @@ nav .nav__links:hover::before {
   transform: scaleX(1);
 }
 
+.container {
+  margin: 3em 1em;
+  padding: 2em;
+  background-color: var(--clr-primary-400);
+  border-radius: 1rem;
+}
+
+.container .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.container .form-control:last-child {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+  margin-bottom: 0;
+}
+
+.container .form-control input {
+  width: 100%;
+  outline: none;
+}
+
 @media (min-width: 50em) {
   header {
     flex-direction: row;
@@ -174,6 +201,10 @@ nav .nav__links:hover::before {
     width: 50%;
   }
 
+  .show__nav {
+    height: auto;
+  }
+
   nav .nav__lists {
     flex-direction: row;
     justify-content: flex-end;
@@ -181,5 +212,10 @@ nav .nav__links:hover::before {
 
   nav .nav__items {
     padding-left: 3em;
+  }
+
+  .container {
+    width: 50%;
+    margin-inline: auto;
   }
 }
