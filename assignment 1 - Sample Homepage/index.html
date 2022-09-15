@@ -33,19 +33,21 @@
       <form novalidate>
         <div class="form-control">
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
         </div>
-        <div class="form-control">
+        <div class="form-control inverted">
           <label for="dob">Dob:</label>
-          <input type="date" name="dob" id="dob" />
+          <input type="date" name="dob" id="dob" required />
+          <label for="age">Age:</label>
+          <input type="number" name="age" id="age" max="100" min="5" required />
         </div>
         <div class="form-control">
           <label for="email">Email:</label>
-          <input type="email" name="eamil" id="email" />
+          <input type="email" name="email" id="email" required />
         </div>
         <div class="form-control">
           <label for="password">Password:</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" id="password" required />
         </div>
         <div class="form-control">
           <button class="form__submit" type="submit">Submit</button>

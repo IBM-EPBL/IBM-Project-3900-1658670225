@@ -92,6 +92,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 1.5em;
   background-color: var(--clr-primary-400);
   color: var(--clr-primary-200);
@@ -114,13 +115,17 @@ header {
 }
 
 nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
   height: 0;
   overflow: hidden;
   transition: all 450ms ease-in-out;
+  background-color: var(--clr-primary-400);
 }
 
 .show__nav {
-  height: 120px;
+  height: 130px;
 }
 
 nav .nav__lists {
@@ -185,6 +190,13 @@ nav .nav__links:hover::before {
   outline: none;
 }
 
+.form-control.inverted {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  width: 100%;
+}
+
 @media (min-width: 50em) {
   header {
     flex-direction: row;
@@ -196,6 +208,7 @@ nav .nav__links:hover::before {
   }
 
   nav {
+    position: relative;
     height: auto;
     overflow: visible;
     width: 50%;
