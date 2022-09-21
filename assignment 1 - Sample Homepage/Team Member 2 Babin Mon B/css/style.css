@@ -1,0 +1,234 @@
+:root {
+  --clr-bg: #fdeedc;
+  --clr-primary-400: #ffd8a9;
+  --clr-primary-300: #f1a661;
+  --clr-primary-200: #e38b29;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-bg);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* header and navbar design */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1.5em;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-primary-200);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.wrapper .title {
+  font-size: 1.8rem;
+}
+
+.wrapper .nav__btn {
+  width: 20px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all 450ms ease-in-out;
+  background-color: var(--clr-primary-400);
+}
+
+.show__nav {
+  height: 130px;
+}
+
+nav .nav__lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+}
+
+nav .nav__items {
+  margin-block: 0.5em;
+}
+
+nav .nav__links {
+  position: relative;
+  color: var(--clr-primary-200);
+  text-decoration: none;
+}
+
+nav .nav__links::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-primary-200);
+  transform: scaleX(0);
+  transition: all 450ms ease-in-out;
+}
+
+nav .nav__links:hover::before {
+  transform: scaleX(1);
+}
+
+.container {
+  margin: 3em 1em;
+  padding: 2em;
+  background-color: var(--clr-primary-400);
+  border-radius: 1rem;
+}
+
+.container .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.container .form-control:last-child {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+  margin-bottom: 0;
+}
+
+.container .form-control input {
+  width: 100%;
+  outline: none;
+}
+
+.form-control.inverted {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  width: 100%;
+}
+
+@media (min-width: 50em) {
+  header {
+    flex-direction: row;
+    padding-inline: 3em;
+  }
+
+  .nav__btn {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    width: 50%;
+  }
+
+  .show__nav {
+    height: auto;
+  }
+
+  nav .nav__lists {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  nav .nav__items {
+    padding-left: 3em;
+  }
+
+  .container {
+    width: 50%;
+    margin-inline: auto;
+  }
+}

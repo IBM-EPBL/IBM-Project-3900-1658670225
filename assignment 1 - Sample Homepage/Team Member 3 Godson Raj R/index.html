@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 - Sample Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1 class="title">Intro Page</h1>
+        <img class="nav__btn" src="./images/bars-solid.svg" alt="" />
+      </div>
+      <nav>
+        <ul class="nav__lists">
+          <li class="nav__items"><a href="#" class="nav__links">Home</a></li>
+          <li class="nav__items"><a href="#" class="nav__links">Contact</a></li>
+          <li class="nav__items"><a href="#" class="nav__links">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <form>
+        <div class="form-control">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-control inverted">
+          <label for="dob">Dob:</label>
+          <input type="date" name="dob" id="dob" required />
+          <label for="age">Age:</label>
+          <input type="number" name="age" id="age" max="100" min="5" required />
+        </div>
+        <div class="form-control">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-control">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="form-control">
+          <button class="form__submit" type="submit">Submit</button>
+          <button class="form__submit" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
