@@ -1,6 +1,4 @@
 <img src="./thumbnail.png">
-# IBM-Project-3900-1658670225
-# Plasma Donor Application
 
 <h2>TEAM ID : PNT2022TMID00855</h2>
 <ul>
